@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 480" role="img" aria-label="TradeMux — Forex Unified API Gateway for MT4 and MT5">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"  stop-color="#00092C"/>
+      <stop offset="45%" stop-color="#020F45"/>
+      <stop offset="100%" stop-color="#051046"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"  stop-color="#0925F9"/>
+      <stop offset="100%" stop-color="#0AE9EB"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="42%" r="50%">
+      <stop offset="0%"  stop-color="#0AE9EB" stop-opacity="0.25"/>
+      <stop offset="55%" stop-color="#0925F9" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#020F45" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="16" cy="16" r="1.3" fill="#0AE9EB" opacity="0.18"/>
+    </pattern>
+    <linearGradient id="chip" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="#0a1959" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#050d3a" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background layers -->
+  <rect width="1400" height="480" fill="url(#bg)"/>
+  <rect width="1400" height="480" fill="url(#dots)"/>
+  <ellipse cx="700" cy="200" rx="620" ry="220" fill="url(#glow)"/>
+
+  <!-- Decorative connectors flanking the wordmark -->
+  <g stroke="#0AE9EB" stroke-width="1" stroke-dasharray="3 6" opacity="0.35" fill="none">
+    <line x1="60"   y1="195" x2="320"  y2="195"/>
+    <line x1="1080" y1="195" x2="1340" y2="195"/>
+  </g>
+  <g fill="#0AE9EB" opacity="0.55">
+    <circle cx="320"  cy="195" r="4"/>
+    <circle cx="1080" cy="195" r="4"/>
+    <circle cx="290"  cy="195" r="2"/>
+    <circle cx="1110" cy="195" r="2"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g font-family="'Audiowide', 'Orbitron', 'Russo One', 'Inter', system-ui, sans-serif" text-anchor="middle">
+    <text x="700" y="218" font-size="124" font-weight="700" fill="#ffffff" letter-spacing="3">
+      Trade<tspan fill="url(#brand)">Mux</tspan>
+    </text>
+    <text x="700" y="270" font-size="22" fill="#0AE9EB" letter-spacing="9" font-weight="500" opacity="0.9">
+      FOREX UNIFIED API GATEWAY
+    </text>
+  </g>
+
+  <!-- Hub-to-spokes (only what the examples actually demonstrate) -->
+  <g stroke="#0AE9EB" stroke-width="1" stroke-dasharray="2 5" opacity="0.3" fill="none">
+    <line x1="700" y1="320" x2="540" y2="395"/>
+    <line x1="700" y1="320" x2="860" y2="395"/>
+  </g>
+
+  <!-- Platform chips: MT4, MT5 -->
+  <g font-family="'Inter', system-ui, sans-serif" font-size="24" font-weight="700" text-anchor="middle">
+    <g>
+      <rect x="440" y="380" width="200" height="64" rx="14" fill="url(#chip)" stroke="#0AE9EB" stroke-opacity="0.5"/>
+      <text x="540" y="421" fill="#ffffff">MetaTrader 4</text>
+    </g>
+    <g>
+      <rect x="760" y="380" width="200" height="64" rx="14" fill="url(#chip)" stroke="#0AE9EB" stroke-opacity="0.5"/>
+      <text x="860" y="421" fill="#ffffff">MetaTrader 5</text>
+    </g>
+  </g>
+
+  <!-- Connection nodes on each chip -->
+  <g fill="#0AE9EB">
+    <circle cx="540" cy="380" r="3.5"/>
+    <circle cx="860" cy="380" r="3.5"/>
+  </g>
+
+  <!-- Center hub node -->
+  <circle cx="700" cy="320" r="5" fill="url(#brand)"/>
+  <circle cx="700" cy="320" r="11" fill="none" stroke="#0AE9EB" stroke-opacity="0.3" stroke-width="1"/>
+</svg>
