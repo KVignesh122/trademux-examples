@@ -151,3 +151,15 @@ client.kill_switch(timeout=60)
 - 💬 Issues & feature requests welcome here
 
 If these snippets save you time, a ⭐ on the repo helps other quants find it.
+
+---
+
+## About SkyBlue Fintech
+
+TradeMux is built and operated by **SkyBlue Fintech Solutions LLP**, a Singapore-based trading technology company focused on clean APIs, cross-platform execution infrastructure, and developer-first tooling for systematic traders.
+
+Thanks for checking out the repo.
+
+<p>
+  <img src="assets/banner.svg" alt="TradeMux by SkyBlue Fintech" width="220" />
+</p>
