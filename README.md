@@ -73,14 +73,14 @@ python 01_quick_start.py
 
 ## The Examples
 
-| # | File | What it shows |
-|---|---|---|
-| 01 | `01_quick_start.py` | Connect, check server, print account state and a live quote |
-| 02 | `02_fetch_ohlc.py` | Recent bars or a bounded historical window straight into a DataFrame |
-| 03 | `03_place_order.py` | Market BUY / SELL with optional SL/TP — guarded against accidents |
-| 04 | `04_monitor_positions.py` | Poll account + open positions in a clean loop |
-| 05 | `05_kill_switch.py` | Flatten everything fast, with explicit confirmation guard |
-| 06 | `06_simple_strategy.py` | End-to-end: OHLC → signal → position check → optional execution |
+| #   | File                      | What it shows                                                        |
+| --- | ------------------------- | -------------------------------------------------------------------- |
+| 01  | `01_quick_start.py`       | Connect, check server, print account state and a live quote          |
+| 02  | `02_fetch_ohlc.py`        | Recent bars or a bounded historical window straight into a DataFrame |
+| 03  | `03_place_order.py`       | Market BUY / SELL with optional SL/TP — guarded against accidents    |
+| 04  | `04_monitor_positions.py` | Poll account + open positions in a clean loop                        |
+| 05  | `05_kill_switch.py`       | Flatten everything fast, with explicit confirmation guard            |
+| 06  | `06_simple_strategy.py`   | End-to-end: OHLC → signal → position check → optional execution      |
 
 ### What you'll see
 
@@ -105,11 +105,11 @@ python 01_quick_start.py
 
 The two scripts that can move money are intentionally locked behind explicit opt-ins:
 
-| Script | Required env var |
-|---|---|
-| `03_place_order.py` | `TRADEMUX_ALLOW_LIVE_TRADES=1` |
-| `05_kill_switch.py` | `TRADEMUX_CONFIRM_KILL_SWITCH=YES` |
-| `06_simple_strategy.py` (execution path) | `TRADEMUX_ALLOW_LIVE_TRADES=1` |
+| Script                                   | Required env var                   |
+| ---------------------------------------- | ---------------------------------- |
+| `03_place_order.py`                      | `TRADEMUX_ALLOW_LIVE_TRADES=1`     |
+| `05_kill_switch.py`                      | `TRADEMUX_CONFIRM_KILL_SWITCH=YES` |
+| `06_simple_strategy.py` (execution path) | `TRADEMUX_ALLOW_LIVE_TRADES=1`     |
 
 Without the flags, they print what they would do and exit. Test on a demo account first.
 
@@ -146,6 +146,7 @@ client.kill_switch(timeout=60)
 ## Links
 
 - 🌐 [trademux.io](https://www.trademux.io)
+- 🏢 [skybluefin.tech](https://skybluefin.tech)
 - 📚 [docs.trademux.io](https://docs.trademux.io) — full SDK reference
 - 🐍 [pypi.org/project/trademux](https://pypi.org/project/trademux/)
 - 💬 Issues & feature requests welcome here
@@ -156,10 +157,8 @@ If these snippets save you time, a ⭐ on the repo helps other quants find it.
 
 ## About SkyBlue Fintech
 
-TradeMux is built and operated by **SkyBlue Fintech Solutions LLP**, a Singapore-based trading technology company focused on clean APIs, cross-platform execution infrastructure, and developer-first tooling for systematic traders.
-
-Thanks for checking out the repo.
+TradeMux is built and operated by **SkyBlue Fintech Solutions LLP** [[corporate site]](https://skybluefin.tech "Company site"), a Singapore-based Data Analytics and Processing Company and a member of the Singapore FinTech Association.
 
 <p>
-  <img src="assets/banner.svg" alt="TradeMux by SkyBlue Fintech" width="220" />
+  <img src="assets/skyblue-logo-dark.svg" alt="SkyBlue Fintech logo" width="220" />
 </p>
