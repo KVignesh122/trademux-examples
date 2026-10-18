@@ -1,1 +1,3 @@
-trademux>=0.1.3
+trademux
+pandas
+yfinance
