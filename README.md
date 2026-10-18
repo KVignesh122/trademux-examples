@@ -9,7 +9,7 @@ Two beginner-friendly Python files for an MT4 or MT5 account connected to TradeM
 | File | What it shows |
 | --- | --- |
 | [`trademux_basics.py`](trademux_basics.py) | Account details, quotes, candles, orders, positions, trade history, and account controls. |
-| [`simple_strategy.py`](simple_strategy.py) | A loop that checks a breakout signal when each new bar appears and can send a market order. |
+| [`simple_strategy.py`](simple_strategy.py) | A one-minute breakout loop with stop loss, take profit, and optional market orders. |
 
 ## Get started
 
@@ -20,7 +20,7 @@ Two beginner-friendly Python files for an MT4 or MT5 account connected to TradeM
 
 `trademux_basics.py` has numbered sections with commented code. Edit values directly in the example calls, uncomment the lines you want to try, and run the file. It prints nothing until you enable a section. Order, modification, close, and kill-switch calls act on the connected account when uncommented. Try those on a demo account first. Keep your real API key out of commits.
 
-`simple_strategy.py` checks for a new `TIMEFRAME` bar every `POLL_SECONDS`. At each new bar it compares the most recently closed candle with the candle before it: a close above the previous high is a buy signal, and a close below the previous low is a sell signal. It skips a signal if an open position already exists on `SYMBOL`. `PLACE_TRADES = True` sends market orders; set it to `False` to watch signals only. Stop the loop with Ctrl+C. It needs to stay running to catch each new bar.
+`simple_strategy.py` fetches three one-minute candles shortly after each minute starts. It compares the most recently closed candle with the one before it: a close above the previous high is a buy signal, and a close below the previous low is a sell signal. It places the stop loss beyond those two completed candles and uses `RISK_REWARD` to set the take profit. Adjust `FETCH_DELAY` if the new candle takes longer to appear. `PLACE_TRADES = False` prints signals without placing orders; set it to `True` to trade. Set `ONLY_ONE_POSITION = True` if you want to skip signals while a position is already open on `SYMBOL`. Stop the loop with Ctrl+C.
 
 These are learning examples, not a tested profitable strategy. See the [TradeMux MetaTrader SDK reference](https://docs.trademux.io/mt/) for all available methods and their parameters.
 
